@@ -1,0 +1,557 @@
+<div data-page="10700" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Volume 107 (10700-10799)</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content-block">
+
+
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10700 - Camel Trading">10700 - 
+                        Camel Trading</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Easy problem, the 
+                    difficulty is in the coding... If you want to maximize the overall value, do 
+                    all additions first, and then multiplication. In the other hand, if you want 
+                    to minimize the overall value, do all multiplications first, and then 
+                    additions.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10700 requires 
+                    us to find the min and max of a math expression with only + and * operator 
+                    and number from 1 to 20. Use greedy <br>
+                    algo. For max, sum first then plus. For minus, time first then sum.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10701 - Pre, in and post">10701 - 
+                        Pre, in and post</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">It is in Graph theory that 
+                    if you are given preorder and inorder tree traversal, you will be able to 
+                    reconstruct the tree (thus solve the problem of outputting the postorder 
+                    traversal).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The key idea is that the 
+                    first node in preorder traversal is the root.<br>
+                    Then, find this root in the inorder traversal. Left subtree and right 
+                    subtree from this root will be the next subproblem that you need to solve.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font size="2">Preorder: <b>A</b>BCDEF, 'A' is the root<br>
+                Inorder: CB<b>A</b>EDF, find 'A' in the inorder traversal, 'CB' and 'EDF' is 
+                the left &amp; right subtree</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font size="2">Figure out the pattern and then decode the postorder 
+                traversal.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font size="2">Alternative: this problem requires us to print the post order 
+                tranversal of a binary tree given the preorder and inorder traversal. 
+                Requires ingenuity to come out with short code. Recursive in nature.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10702 - Travelling Salesman">10702 - 
+                        Travelling Salesman</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Use DP. Create a 2D array 
+                    overallProfit[V][D], where V is the current city and D is total days left. 
+                    Initially, all cells is filled with -1 (null). Then, fill 
+                    overallProfit[cities listed in E][0] with 0, this will indicate our base 
+                    case that last cities will have 0 values. Then, from all cities i with day D 
+                    and non null profit, update the profit for the neighbouring cities j with 
+                    D+1 days left:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">overallProfit[j][D] = 
+                    overallProft[i][D-1] + profit[i][j]</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">This problem is similar to 
+                    10681 - Teobaldo's Trip</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10702 requires 
+                    us to find the maximum profit a businessman can earn by going through a set 
+                    of city. It suffices to use a <br>
+                    array of size 110 to represent the city since we know the starting city. We 
+                    build a array which get updated every cycle. <br>
+                    Cycle one represents the profit by going from point A to point B directly. 
+                    Cycle 2 represents the maximum profit by going <br>
+                    from point A to some point that is not B and from that point to B.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10703 - Free spots">10703 - 
+                        Free spots</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Brute force will do. Set up 
+                    a Boolean matrix "isFree" of size 500x500, all initialized to true. Then 
+                    fill in the covered spots as given in the input (set the cell value to 
+                    false). Finally count how many 'true' cells in the matrix. Output the result 
+                    accordingly (when the case is 0, 1, or more than 1).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10703 requires 
+                    us to find the number of uncovered block in a board of certain width and 
+                    height when certain rectangular <br>
+                    blocks are used to cover the board. Tricky part is the x1 and x2 ( and y1 
+                    and y2). x1 may not be smaller than x2.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10705 - The Fun Number System">10705 - 
+                        The Fun Number System</a> (by: Vahe Musoyan, Bugz Podder)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><span lang="en-gb">By: Vahe Musoyan</span></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Courier New" size="2">n is our number.<br>
+                i = k<br>
+                <br>
+                for i = k downto 1<br>
+                {<br>
+                &nbsp; if (n is odd) then it contains i-th bit in it's FNS representation<br>
+                &nbsp; {<br>
+                &nbsp;&nbsp;&nbsp; used[i] = true;<br>
+                &nbsp;&nbsp;&nbsp; if (i-th bit is with a + sign)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n--;<br>
+                &nbsp;&nbsp; else<br>
+                &nbsp;&nbsp;&nbsp; n++;<br>
+                &nbsp; }<br>
+                &nbsp; n = n / 2<br>
+                }</font><font face="Verdana" size="2"><br>
+                <br>
+                </font><font face="Courier New" size="2">in the end if n == 0 then<br>
+                &nbsp; print the array used<br>
+                else<br>
+                &nbsp; print that it is not possible</font><font face="Verdana" size="2"><br>
+                <br>
+                In this algorithm we simulate the operation backwards.<br>
+                At first we consider that it is possible and try to guess how it is 
+                represented in FNS.<br>
+                And in each step we can surely no wheter a bit is used or not.<br>
+                If our consideration was correct we get n == 0; else n != 0;</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font size="2">By: Bugz Podder</font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font size="2">instead of the greedy algorithm, the brute force algorithm 
+                with a little backtracking does the trick. just try all 2^N possibilities... 
+                but and the backtracking is based on the idea that<br>
+                2^0+2^1+2^2+...+2^(k-1)=2^k - 1&lt;2^k... so terminate the recursion when you 
+                have something like that (i.e. don't try to make a value of 2^k or greater 
+                when you can only use the ones from 2^0 to 2^(k-1)).&nbsp;The runtime for this 
+                algorithm gave me 0.00.002</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10706 - Number Sequence">10706 - 
+                        Number Sequence</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">1 12 123 1234<br>
+                    Find the pattern, and solve it...<br>
+                    You may want to refer to problem 10427 - Naughty Sleepy Boys, an easier 
+                    version of this problem. </font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10707 - 2D-Nim">10707 - 
+                        2D-Nim</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Compare the similarity 
+                    between two boards. I solve this by converting each cluster into a specific 
+                    index.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">x = vertex<br>
+                    - = edge</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Then, for the following 
+                    vertex and edges, I will give a value as follows:<br>
+                    <br>
+                    </font><font face="Courier New" size="2">--x&nbsp;&nbsp; =&gt; 1<br>
+                    <br>
+                    --x-- =&gt; 2<br>
+                    <br>
+                    --x-- =&gt; 3<br>
+                    &nbsp; |<br>
+                    <br>
+                    &nbsp; |<br>
+                    --x-- =&gt; 4<br>
+                    &nbsp; |<br>
+                    <br>
+                    &nbsp; |<br>
+                    --x&nbsp;&nbsp; =&gt; 5</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Thus for the following 
+                    cluster, I will give a value: 19 (5+5+5+3+1)</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Courier New" size="2">x--x<br>
+                    |&nbsp; |<br>
+                    x--x--x</font><font face="Verdana" size="2"><br>
+                    <br>
+                    I will do this for all cluster in board 1 and board 2, sort the values, and 
+                    finally compare the two set of values. Only if all of them equal, then I 
+                    will declare two boards as compatible (Yes), otherwise output No.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10707 requires 
+                    us to check if two board are equivalent in the sense that the two board has 
+                    the same number of same-shape section. To check for same shape, define six 
+                    basic shapes and for board1, count the number of the six basic shape. Do 
+                    likewise for board2, Check if number of each shape on board1 equals that of 
+                    board2 and output accordingly. Question is not clear that the order of 
+                    stating the pieces does not represent the piece name in each board.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b>
+                        <a name="10709_-_Intersection_is_Not_that_Easy">10709 - Intersection is Not 
+                            that Easy</a></b><br>
+                    <br>
+                    This problem requires us to find the distance of a line segment or line from 
+                    another line segment. Find equation of line even for line segment. Check 
+                    cases of parallel for line or line segments (determinant=0). Otherwise, 
+                    check for intersection between the line (for a line segment, assume they are 
+                    lines and then see if intersection point is between the range of x and y ).
+                    </font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b><a name="10713_-_Map">
+                            10713 - Map</a></b><br>
+                    <br>
+                    This problem requires us to find the path to reach the treasure from a 
+                    landing point. Only 8 cardinal direction are allowed. Trick of this question 
+                    is that most people will think that since circle is convex, a person can 
+                    reach the treasure from the landing point without going beyond the circular 
+                    island. However, given the 8 cardinal directions, it is possible to go out 
+                    if for example you go north first before going northeast or sometime you go 
+                    northeast first before going north. Need to check all the test. Expert 
+                    coders may be able to code this by considering a few cases whereas 
+                    cumbersome one may need to exhaust all the case. Should not use sqrt(2.0f), 
+                    use calculator to calculate and define macro. Do not use 2.0f else double 
+                    not accurate to 10dp.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10714 - Ants">10714 - Ants</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">After some observation:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">the shortest time for all 
+                    ant to fall down will be determined by the shortest length among all ants in 
+                    position x to left side of the pole (length: x-0 = x) or to right side of 
+                    the pole (length: l-x).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">the longest time for all 
+                    ant to fall down will be determined by the farthest length among all ants in 
+                    position x to left side of the pole (length: x-0 = x) or to right side of 
+                    the pole (length: l-x).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10714 requires 
+                    us to find the minimum time and maximum time taken by ants on a rod to fall 
+                    off the rod with carefully chosen <br>
+                    initial direction of all the ants. It is easy to see that the minimum time 
+                    is when there is no collision (i.e all ants on left side of the middle of 
+                    rod move left and all ants on right side of middle of rod move right. For 
+                    the maximum time, it is intuitive that more collision will lead to more 
+                    distance travelled by all the ants implying a longer time taken. However, it 
+                    will lead to TLE if we try to stimulate it. Observe the input carefully to 
+                    observe that the longest time is the max(time for leftmost ant to reach RHS, 
+                    time for rightmost ant to reach LHS). This is quite similar with the minimum 
+                    time formula max(time for leftmost ant on RHS of middle to reach RHS, time 
+                    for rightmost ant on LHS of middle to reach LHS). The proof is hard to 
+                    establish though.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b>
+                        <a name="10716_-_Evil_Straw_Warts_Live">10716 - Evil Straw Warts Live</a></b><br>
+                    <br>
+                    This problem requires us to find the number of swaps needed to turn a string 
+                    into a palindrome or ouput impossible if string cannot be turned into a 
+                    palindrome. Use greedy algo. First check if the string can be turned into a 
+                    palindrome by checking the frequency of letters. If only one or zero letter 
+                    have odd frequency, then string can be turned into palindrome. To check the 
+                    number of swaps needed, keep a table of leftmost idx(to count the number of 
+                    position to the right of the leftmost letter of the first-occuring letter) 
+                    and rightmost idx(to count the number of position to the left of the 
+                    rightmost letter of the first-occuring letter) for each alphabet that 
+                    appears in the string. Find the sum of the two array for each alphabets. The 
+                    least of the sum array will be the letter to shift to the leftmost and to 
+                    the rightmost and the least sum will be the number of shifts needed. This 
+                    will result in a truncated string. Continue until 1 or 2 letter are left. 
+                    The greedy algo is hard to see and hard to prove also.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b><a name="10717_-_Mint">
+                            10717 - Mint</a></b><br>
+                    <br>
+                    This problem requires us to find the min and max height of a table formed 
+                    with a set of coin with distinct coin type for its four legs. This is an ad 
+                    hoc question. Implement the following algo. if coin={50,100,200,400} and 
+                    desired table height is 1000, find the closest multiple (that is smaller) of 
+                    coin thickness for each coin type. coin becomes {1000,1000,1000,800}. Check 
+                    if there are at least 4 of maximum=1000. If yes, output 1000, else look for 
+                    2nd maximum which is 800. Repeat the above step with desired table 
+                    height=800. Implement the same algo for max height of table.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b>
+                        <a name="10718_-_Bit_Mask">10718 - Bit Mask</a></b><br>
+                    <br>
+                    This problem requires us to find the minimum M that will give the maximum M 
+                    or N where M lies within a range (L,U). Use greedy algo. Start finding the 
+                    MSB of the answer. Set bit to 1. Check if it is greater than U. If it is, 
+                    set bit to 0. If not, check if bit of N at that bit position=1. If =1, check 
+                    if you set bit to 0 will lead to ans less than L. If it will lead to ans 
+                    less than L, dont set it to 0, else set it to zero. Hard to come up with 
+                    greedy algo.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10719 - Quotient Polynomial">10719 - 
+                        Quotient Polynomial</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Pretty straightforward. And 
+                    if I am not mistaken, this problem already appear previously in other 
+                    volume...</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10719 requires 
+                    us to print the coefficient of the quotient and remainder when a polynomial 
+                    is divided by x-k. The input needs <br>
+                    to be retrieved using istringstream and its eof() function. The input given 
+                    by the UVA judge is problematic as it prints -5 as ^u5. Need to edit the - 
+                    accordingly. The input could be 0 0 0 0 5 which means the polynomial is 5. 
+                    The ans to print is also 0 0 0 0 for the quotient. No need to remove the 
+                    leading zero. When the input is just 5. The quotient should not have 
+                    anything after the : ("q(x) :"). Need to print new line at the end of every 
+                    test case, even the last. This is a Math problem. Need to do some algebraic 
+                    Math before translating it to code.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><span lang="en-gb"><font face="Verdana" size="2">
+                        <a name="10721_-_Bar_Codes">10721 - Bar Codes</a></font></span></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">10721 requires us to find 
+                    the number of ways to produce a barcode of given length (len), number of 
+                    segment(seg) and the maximum(max) length that the longest length can take. 
+                    Use 3D DP. 4 base case: a) max&gt;len =&gt; 0. b)seg=1, i)len==max =&gt; 1 ii) len!=max 
+                    =&gt; 0 c)len&lt;max+seg-1 =&gt;0. This dparr will store the number of ways toproduce 
+                    a barcode of given length, number of segment and the maximum 
+                    length(compulsory) that the longest length can take. Output must then be 
+                    summing out the possible maximum length from 1 to max. Use long long = 64 
+                    bits.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2"><b>
+                        <a name="10724_-_Road_Construction">10724 - Road Construction</a></b><br>
+                    <br>
+                    This problem requires us to find the road to built to maximise the efficency 
+                    of the road network. The increase in efficiency of the road network is 
+                    measured by the summation of the difference of old distance from node i to 
+                    node j before a particular road was built and the new distance after the 
+                    road is built. If the increase in efficency is less than 1, then no road 
+                    should be built. Use Floyd Warshall algorithm. Later, for each edge built, 
+                    find the cost fn of it by summing all the efficiency of different 
+                    node-to-node distance when that edge is built. At the same time, save the 
+                    maximum cost function and its associated weight and the 2 nodes involved. As 
+                    this question involves double use epilson 1e-10 to check &gt;,&lt;.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><span lang="en-gb"><font face="Verdana" size="2">
+                        <a name="10733_-_The_Colored_Cubes">10733 - The Colored Cubes</a></font></span></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">This problem requires us to 
+                    find the number of unique cubes given different number of color to color the 
+                    sides of the cube. This question requires the knowledge of Polya-Burnside 
+                    theory to count equivalence class. Once you understand the Math behind, you 
+                    can write a polynomial answer for output. The answer for this question is 
+                    (n^6+3n^4+12n^3+8n^2)/24.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10734 - Triangle Partitioning">10734 - 
+                        Triangle Partitioning</a> (by: Eduard Piliposyan)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem is easy and can be solved 
+                recursively. You must remember all triangles and stop, if during recursion 
+                you get such triangle that you already get before. Because N is small this 
+                algorithm will finish very fast.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: 10734 requires us to partition a 
+                triangle using the median of its longest edge and find the total number of 
+                type of triangle formed. We are assured that the number of triangle is less 
+                than 100 so we could just use recursion to perform the dividing and insert 
+                into library if a certain type of triangle cannot be found in the list. Use 
+                array instead of map to store the triangle dimension as using double as key 
+                in map is dangerous. Use "fabs(trianglelist[0][i]-side[0])&lt;0.000001" to 
+                compare if a particular dimension can be found in the triangle list. 
+                Normalize the triangle length to its longest edge. Do the Math on paper to 
+                reduce the cosine rule to algebraic Math.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10738 - Riemann vs Mertens">10738 - 
+                        Riemann vs Mertens</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The problem is easy. It 
+                    depends on how you optimize your algorithm. My algorithm use the idea of 
+                    modified Sieve.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Here is my algorithm:<br>
+                    Prepare a Boolean array squareFree[1..1000000], initialize them all to true<br>
+                    Prepare an integer array totalPrimeFactors[1..1000000], initialize them all 
+                    to 0</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Then do modified sieve:<br>
+                    loop from 2 to 1000000, but this time,<br>
+                    instead of deleting multiples of 2, I increment the totalPrimeFactors of 
+                    multiple of 2 by one,<br>
+                    and then go on to 3, increment totalPrimeFactors of multiple of 3 by one,<br>
+                    and then go on to 5, increment totalPrimeFactors of multiple of 5 by one,<br>
+                    and so on.<br>
+                    At the end, for each number i, I will know how many "distinct" prime factors 
+                    make up this number :).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">loop again from 2 to 
+                    1000000, this time update the squareFree flags,<br>
+                    instead of deleting multiples of 2, mark squareFree of multiples of 4 (2*2) 
+                    as false<br>
+                    and then go on to 3, mark squareFree of multiples of 9 (3*3) as false<br>
+                    and then go on to 5, mark squareFree of multiples of 25 (5*5) as false<br>
+                    until 1000 (1000*1000 = 1000000).<br>
+                    At the end, for each number i, I will know whether this number is squareFree 
+                    or not.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The rest is easy.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: this problem 
+                    requires us to find the mu and mobius of a number from 1 to 1,000,000. 
+                    Precalculate. Modify Sieve so that sieve[number] will contain the number of 
+                    unique prime. Later, turn odd number into mu=-1 and even number into mu=1. 
+                    For not square-free number, they are 2*2=4, and all multiples of 4 and 3*3=9 
+                    and all multiple of 9, etc. Use a boolean array to keep track of that. If 
+                    boolean is false, change mu to 0. Also compute mobius by summing up the mu 
+                    from bottom up.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10739 - String to Palindrome">10739 - 
+                        String to Palindrome</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">This is a DP problem. For 
+                    string[1..n], the problem can be solved by the following recurrence:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">cost(string[l..r]) = 0 if l 
+                    &gt;= r, which denotes 1 element string or empty string or,<br>
+                    cost(string[l..r]) = cost(string[l-1..r-1]) if string[l] = string[r], this 
+                    is obvious.<br>
+                    cost(string[l..r]) = 1 + min(cost(string[l-1..r-1]), cost(string[l-1..r]), 
+                    cost(string[l..r-1])),<br>
+                    if string[l] != string[r], which models the possible operations given in the 
+                    problem description.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left"><span lang="en-gb">
+                    <font face="Verdana" size="2">Use memoization to optimize overlapping 
+                    sub-problems.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left"><span lang="en-gb">
+                    <font face="Verdana" size="2">Alternative: this problem requires us to find the 
+                    number of edit operations to change a string to palindrome. Use DP. Look at 
+                    leftmost and rightmost character at a time. If they are the same, look at the 
+                    inner string (no operation is needed). Need to convince yourself that insertion 
+                    is not needed in this question. Use delete for left or right character to 
+                    achieve the same operation as delete.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10742 - The New Rule in Euphomia">10742 - 
+                        The New Rule in Euphomia</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" dir="ltr" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Create a list of prime 
+                    numbers, there are around 80.000 prime numbers in range [2 .. 1,000,000]. We 
+                    will need two distinct prime numbers a and b, where a + b &lt;= n. Loop from 2 
+                    to prime number less than n, counting the number of way to do this addition.
+                    <i>Hint: use binary search to speed up the searching of prime number in the 
+                        array of 80.000 (sorted) prime numbers...</i></font></span></p>
+            <p style="margin-left: 10; margin-right: 10" dir="ltr" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: 10742 requires 
+                    us to find the number of way to pay a certain amount of money with two 
+                    distinct coin with some or no 1 cent <br>
+                    coin. The coin denominator are all prime. First find all the prime less than 
+                    1 million through sieve. Then put it in a sorted array. Then binary search 
+                    the number of ways to produce a sum less than or equal to the sum to pay.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" dir="ltr" align="left">
+                <b><span lang="en-gb"><font face="Verdana" size="2">
+                        <a name="10746_-_Crime_Wave_-_The_Sequel">10746 - Crime Wave - The Sequel</a></font></span></b></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">10746 requires 
+                    us to find the minimum time of dispatching car to the crime scene. Use DP by 
+                    keeping a state number. Number of states are 2^cars. Reuse coding from 
+                    Duilian, Contest 1 adapted from Team 5. Forum says other method of solving 
+                    is Min-Cost Max-Flow. Used Bellman-Ford algorithm to check for negative 
+                    cycle and Ford-Fulkerson algorithm to flow. Accuracy is important for 
+                    question concerning floating number. 0.015 printed in 2dp could become 0.01 
+                    instead of 0.02 (proper rounding). Use + 0.000005 for proper rounding off.</font></span></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10759 - Dice Throwing">10759 - 
+                        Dice Throwing</a> (by: Eduard Piliposyan)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem can be solved using DP or PIE 
+                (Principe of Inclusion and Exclusion). PIE Is more general. You can find 
+                formula using PIE. The problem is very similar to 10238-Throw the dice.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10763 - Foreign Exchange">10763 - 
+                        Foreign Exchange</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Sort the pairs (A,B) 
+                    according to their A values. Then, for all pair (A,B), find the 
+                    corresponding (B,A) in the list by using binary search, once found, mark the 
+                    pairs as used. At the end, output "YES" if all pairs are used, output "NO", 
+                    otherwise.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10771 - Barbarian Tribes">10771 - 
+                        Barbarian Tribes</a> (by: Eduard Piliposyan)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">The answer for this problem is just one 
+                operation, the code is only 3 lines. But for finding the answer you must 
+                simulate the process than precalculate answer for small n and m, then You 
+                will find the solution.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">The answer is: if (m%2==0) cout &lt;&lt; "Gared"; 
+                else cout &lt;&lt; "Keka";</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10776 - Determine The Combination">
+                        10776 - Determine The Combination</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">I still got TLE... you 
+                    can't enumerate them all and then print... there must be a more 
+                    sophisticated way to do this...</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10780 - Again Prime No time.">10780 - 
+                        Again Prime? No time.</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">I will illustrate my 
+                    solution using this example: m = 24, n = 4, the answer is 1<br>
+                    Split m into its prime factors -&gt; m = 2^3 * 3^1<br>
+                    Then loop from i = 2 to (n=4)<br>
+                    &nbsp; there are 1 '2' in i=2, 0 '2' in i=3, 2 '2' in i=4, total: <b>3</b><br>
+                    &nbsp; there are 0 '3' in i=2, 1 '3' in i=3, 0 '3' in i=4, total: <b>1</b><br>
+                    Pick the minimum from 3 and 1... =&gt; 1</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Another example: m = 2, n = 
+                    10, the answer is 8<br>
+                    Split m into its prime factors -&gt; m = 2^1<br>
+                    Then loop from i = 2 to (n=10)<br>
+                    &nbsp; there are 1 '2' in i=2, 2 '2' in i=4, 1 '2' in i=6, 3 '2' in i=8, 1 '2' 
+                    in i=10, total: <b>8</b><br>
+                    Output 8</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10783 - Odd Sum">10783 - 
+                        Odd Sum</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Very-very 
+                    straightforward... Just do it in less than 2-3 minutes...</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10784 - Diagonal">10784 - 
+                        Diagonal</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The number of diagonals in 
+                    n-gon is n*(n-3)/2.<br>
+                    Therefore you need to calculate n such that:<br>
+                    n*(n-3)/2 &gt;= N<br>
+                    n^2 - 3*n - 2*N &gt;= 0<br>
+                    with a = 1, b = -3, c = -2*N, use this formula: n = ceil((-b + sqrt(b*b - 
+                    4*a*c)) / 2*a)</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10785 - The Mad Numerologist">10785 - 
+                        The Mad Numerologist</a> (Notes from: Sabuz Hassan)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" dir="ltr" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">I haven't got this correct, 
+                    but roughly it should be a simple string enumeration problem...</font></span></p>
+            <div>
+                <p style="margin-left: 10; margin-right: 10" align="left">
+                    <font face="Verdana" size="2">Notes from Sabuj Hassan:</font></p>
+                <p style="margin-left: 10; margin-right: 10" align="left">
+                    <font face="Verdana" size="2">After generating the name, just sort the 
+                    string twice:<br>
+                    1) odd position, and<br>
+                    2) even position</font></p></div>
+            <div>
+                <p style="margin-left: 10; margin-right: 10" align="left">
+                    <font face="Verdana" size="2">I think this will do.<br>
+                    Furthermore, test input with n=40 then you will find what is wrong.</font></p></div>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="10789 - Prime Frequency">10789 - 
+                        Prime Frequency</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Simply count the number of 
+                    occurrences of each character, and then if the number of occurrences is 
+                    prime, print the character... if no such case, print 'empty'.</font></span></p>
+
+
+
+
+        </div>
+    </div>
+</div>

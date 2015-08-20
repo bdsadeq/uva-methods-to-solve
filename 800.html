@@ -1,0 +1,568 @@
+<div data-page="800" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Volume 8 (800-899)</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content-block">
+
+
+
+
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><a name="802_-_Lead_or_Gold">802 - Lead or 
+                    Gold</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">This question can 
+                    be solved using simplex. The first phase of the two phase method of simplex 
+                    finds a feasible solution to linear system of equations where all the variables 
+                    are positive. This is essentially what the question asks for - whether it is 
+                    possible to experience a vector as linear combination of other vectors given 
+                    that the coefficients must all be positive.</span><br>
+                <br>
+                <a name="808_-_Bee_Breeding">808 - Bee Breeding</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">This question can 
+                    be solved by first converting the cells to hexagonal coordinates as used in 
+                    10182 - Bee Maja. Once that is done, the shortest distance between (ax,ay) and (bx, 
+                    by) is (abs(dx)+abs(dy)+abs(dx+dy))/2 where dx is ax-bx and dy is ay-by.<br>
+                </span><br>
+                <a name="810_-_A_Dicey_Problem">810 - A Dicey Problem</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">DFS from the 
+                    starting position and simulate the dice. If it is possible to reach the end 
+                    point print the path, else print "No Solution Possible".</span><br>
+                <br>
+                <a name="811_-_The_Fortified_Forest">811 - The Fortified Forest</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">Complete search 
+                    with convex hull problem. Try all subsets of given set and compute the convex 
+                    hull for each subset and calculate whether it is feasible and choose the 
+                    minimum-value subset (in case of tie, choose the one with smaller number of 
+                    trees).</span><br>
+                <br>
+                <a name="812_-_Trade_on_Verweggistan">812 - Trade on Verweggistan</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">This can be solved 
+                    using a combination of greedy and dynamic programming. The maximum profit is the 
+                    sum of the maximum profit for each individual pile (which is greedy). To find 
+                    the number of pruls to buy in total, one has to find out the possible number of 
+                    pruls to buy in a pile to form the maximum profit for the pile and use dynamic 
+                    programming to build the solution.</span><br>
+                <br>
+                <a name="814_-_The_Letter_Carriers_Rounds">814 - The Letter Carrier's Rounds</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">Complicated 
+                    simulation problem. Essentially just follow the instructions given in the 
+                    question and sort of simulate a SMTP server.</span><br>
+                <br>
+                </font><b>
+                    <font face="Verdana" size="2"><a name="815_-_Flooded!">8<span lang="en-gb">15</span> - 
+                        <span lang="en-gb">Flooded!</span></a><span lang="en-gb"> (by: Sohel Hafiz)</span></font></b></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><span style="font-weight: 400">This is a 
+                    simulation problem. First sort all the heights in ascending order and then 
+                    greedily fill it with water. First try to pour it in the lowest region and 
+                    fill it until the level of the water reaches the second lowest region. And 
+                    then fill the first and second simultaneously until the level reaches that 
+                    of the third lowest. And then fill 1st, 2nd and 3rd lowest together until 
+                    the level reaches that of 4th lowest and so on. Stop pouring until you run 
+                    out of water.<br>
+                    &nbsp;<br>
+                    Critical input:<br>
+                    1 1<br>
+                    10<br>
+                    0<br>
+                    0 0<br>
+                    <br>
+                    Output:<br>
+                    100% regions is not under water.</span></font></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: Simulation problem. First sort 
+                the elevations by increasing height, then add the water to lowest elevation 
+                such that the level of water reaches the second lowest elevation. Then fill 
+                both the lowest and second lowest region with water simultaneously and do it 
+                till there is no more water left.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><a name="816_-_Abbotts_Revenge">816 - 
+                        Abbott's Revenge</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">BFS. BFS from the starting position and print 
+                the path if the end position is reached. If the end position is never 
+                reached, print "No Solution Possible" instead.<br>
+                <br>
+                <b><a name="817_-_According_to_Bartjens">817 - According to Bartjens</a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Another complete search problem. Try to place 
+                the "+" and "*" at all possible position in the string and compute the 
+                equation at the end. If the equation is equal to 2000, print it out. There's 
+                one special case to note in this problem which is the output of "2000=" 
+                should be "IMPOSSIBLE".<br>
+                <br>
+                </font><b>
+                    <font face="Verdana" size="2"><a name="820_-_Internet_Bandwidth">8<span lang="en-gb">20</span> - 
+                        <span lang="en-gb">Internet Bandwidth</span></a><span lang="en-gb"> (by: MD 
+                        Erfan Hoque)</span></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">One of the easy network flow problem. Build 
+                the graph from the given input. Edges are Bi-directional. One trick is that 
+                there might be more than one connection between a pair of nodes. At that 
+                time add all bandwidth as the bandwidth of that pairs. Then find maximum 
+                flow by using any Network flow algorithm. I think there is no critical case 
+                if algorithm is ok.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: Network flow problem. Just take 
+                note that there might be more than one connection between a pair of nodes 
+                and that all the connections are bi-directional.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="821_-_Page_Hopping">8<span lang="en-gb">21</span> - 
+                        <span lang="en-gb">Page Hopping</span></a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">World final problems... hm... Calculate all pairs 
+                    shortest path distance (Floyd Warshall), and then output the average. Don't count self edge. 
+                    Once you can get the sample input correct, most likely you'll get it 
+                    correct.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: This problem 
+                    can be solved using all-pairs shortest pair path algorithm like floyd 
+                    warshall. Find the shortest pair for all the pairs and take the average of 
+                    all the pairs that are connected.<br>
+                    <br>
+                    <b><a name="824_-_Coast_Tracker">824 - Coast Tracker</a></b></font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">Starting from 
+                    the east side (index 6) to north east (index 7) ... 0, 1, 2, 3, 4, until 
+                    south east side (index 5), check whether that position is a land, if yes, 
+                    output that direction.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: Ad-hoc. Just 
+                    follow the instruction and rotate the direction appropriately looking for 
+                    the first land.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="825_-_Walking_on_the_Safe_Side">825 - 
+                        Walking on the Safe Side</a></font></b></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">This is a DP 
+                    problem. Let the number of ways at row r, and col c is p[r][c].<br>
+                    when index is (1,1), p[r][c] is 1 (starting point)<br>
+                    when index (r,c) is blocked, p[r][c] is 0<br>
+                    the rest are initialized to -1 (unused).</font></span></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Then for all unused cells (r,c) (value is -1),<br>
+                p[r][c] = p[r-1][c] + p[r][c-1];</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">This question can be solved 
+                    using dynamic programming. <br>
+                    Let cnt[r][c] be the number of ways to reach &lt;r,c&gt; from &lt;1,1&gt;<br>
+                    Base case: cnt[1][1] = 1 and cnt[r][c] = 0 if the intersection is unsafe<br>
+                    Formula: cnt[r][c] = cnt[r-1][c] + cnt[r][c-1]<br>
+                    <br>
+                    <b><a name="828_-_Deciphering_Messages">828 - Deciphering Messages</a></b></font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Complete search. Follow the 
+                    problem's specification and do complete search according to it.<br>
+                    <br>
+                    <b><a name="830_-_Shark">830 - Shark</a></b></font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Floodfill. Do floodfill and 
+                    determine what sea creature at the current location and update its count. 
+                    The only problem is that in the judge test case, there is an extra character 
+                    in each of the row. So read in line by line instead of character by 
+                    character.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><span lang="en-gb"><font face="Verdana" size="2">
+                        <a name="832_-_Financial_Risk">832 - Financial Risk</a></font></span></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Ad Hoc. Though the question 
+                    scares people off with the integration sign, it is actually rather simple. 
+                    Just calculate the total uncovered risk and the total risk and output the 
+                    percentage of uncovered risk.<br>
+                    <br>
+                    </font></span><b>
+                    <font face="Verdana" size="2"><a name="833_-_Water_Falls">833 - 
+                        Water Falls</a> (by: Jagadish)</font></b></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">First, find the 
+                    uppermost line the drop can fall on.</font></span></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><font face="Verdana" size="2">
+                <span style="font-weight: 400">A drop <i>d</i> start from coordinate 
+                    (x,y). To find the topmost point that this drop d can fall on, we must try 
+                    all lines. If d's x-coordinate is within a line's leftmost x and rightmost 
+                    x, then this drop d can (probably) fall on this line. Plug in d's 
+                    x-coordinate to this line equation to obtain the y-coordinate of the drop. 
+                    If this y-coordinate is lower than y, then drop d really can fall on this 
+                    line. Iterate through all lines to pick the topmost line... Then decide, 
+                    whether to drop will go left or to go right based on line picked.</span></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">If such line is 
+                    not found print the x-coordinate of the drop (on the ground).</font></span></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The question combines both 
+                    computational geometry and simulation. Firstly, convert all the line 
+                    segments given to line equations. Given that the water drops from d (x,y), 
+                    for all the given lines find the coordinate (x,y0) and check whether (x,y0) 
+                    is part of the line segment and find the maximum y0 &lt;= y in all the lines. 
+                    If there is no such y0, then print out x. Else simulate the water flowing 
+                    down to left or right depending on the gradient of the lines and update (x,y) 
+                    appropriately.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="834_-_Continued_Fractions">834 - 
+                        Continued Fractions</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Store numerator and denominator values, keep 
+                simplifying them until numerator becomes 1.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: This question 
+                    is on continued fractions (just as the question name suggest) and can be 
+                    solved by simplifying the numerator and denominator until the value of 
+                    numerator is 1.</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><span lang="en-gb"><font face="Verdana" size="2">
+                        <a name="835_-_Square_of_Primes">835 - Square of Primes</a></font></span></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">The question is the same as 
+                    "The Primes" from IOI 1994. Complete search can be used to solve it and 
+                    USACO suggested a fast solution to this problem by changing the search order 
+                    instead of the naive search by trying all possible primes for each row and 
+                    check whether the columns are diagonals are primes.<br>
+                    <br>
+                    It was suggested to fill up the matrix in the following order (which will 
+                    reduce the search space):<br>
+                    1 3 3 3 2<br>
+                    8 1 7 2 8<br>
+                    10 4 1 5 10<br>
+                    9 2 7 1 9<br>
+                    2 4 6 5 1<br>
+                    <br>
+                    </font></span><b>
+                    <font face="Verdana" size="2"><a name="836_-_Largest_Submatrix">836 - Largest Submatrix</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem is  another 
+                variation of 108 (Maximum Sum). If you know how to solve 108, then 
+                to solve this problem, you can simply do this: Convert all 0 to -X where -X is any 
+                big negative number, I use -1000,
+                all 1 remains as 1. Then count the rectangle which has 
+                the biggest area using the same algorithm for 108 :-)</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: This problem 
+                    can be solved using Dynamic programming. Firstly, it is possible to 
+                    construct a table sum[i][j] (which means the sum of the "1"s from (0,0) to (i,j)). 
+                    This can be computed in O(N^2). Using the sum table, it is then possible to 
+                    calculate the sum of the box bounded by (a,b) and (c,d). So choose 2 points 
+                    and calculate all the possible boxes. This can be done in O(N^4).</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="837_-_Light_and_Transparencies">837 - 
+                        Light and Transparencies</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">You do not need Y-axis values at all...
+                Sort the X-axis coordinates and then use a big array to store all the 
+                overall transparency coefficients. Sweep through all lines, multiple these 
+                overall coefficients every time you know a line with transparency 
+                coefficient t is above them. Output the result as required.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Alternative: Ad Hoc. This 
+                    problem can be solved using linked list and insertion of new nodes at the 
+                    appropriate positions.</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="839_-_Not_so_Mobile">839 - Not so 
+                        Mobile</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">All you need to do is recursively calculate 
+                what they want, simple</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: Ad Hoc - fun practice for 
+                recursion. Follow the instructions given and recursively calculate what the 
+                question wants.<br>
+                <br>
+                <b><a name="840_-_Deadlock_Detection">840 - Deadlock Detection</a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem is about finding Strongly 
+                Connected Component and Tarjan's algortihm can be used. However, the problem 
+                is rather ambiguous about the output. An assumption has to be made that the 
+                A &lt; ... &lt; Z &lt; a &lt; ... &lt; z.<br>
+                <br>
+                <b><a name="844_-_Pousse">844 - Pousse</a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Simulation. Simulate the game according to the 
+                instructions given in the problem.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><a name="845_-_Gas_Station_Numbers">845 - 
+                        Gas Station Numbers</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">The problem wants to find the next permutation 
+                of the given number with the condition that '5' and '2' can be interchanged 
+                and '6' and '9' can be interchanged. <br>
+                Observation #1: Starting from the end of the number to to front, if at 
+                position i we can change the number with another number (greater than the 
+                number at position i) that is at position greater than i, then choose that.<br>
+                Observation #2: After choosing to change, we need to make the number as 
+                small as possible, by converting the '5' to '2' and '9' to '6'. Then we sort 
+                the ones affected to yield the smallest number.<br>
+                Observation #3: If we cannot find a position i such that observation #1 is 
+                satisfied then it is not possible to form the next permuation. Hence, print 
+                "The price cannot be raised."</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="846_-_Steps">846 - Steps</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b>Base case:<br>
+                </b>if x == y, steps = 0</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b>General case:<br>
+                </b>The most important concept to solve this problem is that the problem 
+                description "implies" that the shortest steps must be in a ladder form. 
+                1-&gt;2-&gt;... increasing -&gt; highest -&gt; .... decreasing -&gt; 2-&gt;1. The problem is 
+                in determining "highest", since the gap in the middle can be a bit complex. 
+                Arithmetic progression formula: n*(n+1)/2 is very helpful here.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">To make things easier to understand, I'll use 
+                example: x = 1, y = 10</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Now, by using Arithmetic Progression (AP) 
+                formula from left &amp; right, reduce the gap step by step, until the gap is 
+                small enough such that the next AP values will be too big for the gap.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">1 2 3 4 5 6 7 8 9 10, difference = 9 (10-1)<br>
+                1<font color="#FF0000">&lt;-&gt;</font>2 3 4 5 6 7 8 9<font color="#FF0000">&lt;-&gt;</font>10, 
+                difference = 7 ((10-1) - 2*AP(1))<br>
+                1<font color="#FF0000">&lt;-&gt;</font>2<font color="#008000">&lt;-&gt;</font>3<font color="#008000">&lt;-&gt;</font>4 
+                5 6 7<font color="#008000">&lt;-&gt;</font>8<font color="#008000">&lt;-&gt;</font>9<font color="#FF0000">&lt;-&gt;</font>10, 
+                difference = 3 ((10-1) - 2*AP(2))</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">current AP value = 2</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">if AP + 1 &gt;= diff, then the difference can be 
+                reached by using only 1 next step move<br>
+                &nbsp; output 2*AP + 1</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">but if AP + 1 &lt; diff, then the difference must 
+                be reached using 2 steps.<br>
+                &nbsp; output 2*AP + 2</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: This problem can be solved using 
+                Binary Search. For each n steps where n is from 1 to 10000, calculate the 
+                furthest distance that can be travelled according to the rules in the 
+                problem. For every input, use lower_bound to find the number of steps 
+                needed.<br>
+                <br>
+                </font><b>
+                    <font face="Verdana" size="2"><a name="847_-_A_multiplication_game">847 - A 
+                        multiplication game</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">It's quite hard to find this rule... however 
+                if Stan and Ollie plays perfect game, then Stan will always try to multiply 
+                p with 9 and Ollie will always try to multiply p with 2..., so just simulate 
+                the process backwards (i.e. from n, you divide by 9, then divide by 2, by 
+                9... etc until n == 1), then check whose turn can make n becomes 1 and 
+                output the winner name.</font></p><h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><a name="850_-_Crypt_Kicker_II">850 - Crypt Kicker II</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Ad Hoc (decrypting 
+                    by "plaintext attack").<br>
+                    <br>
+                </span><a name="852_-_Deciding_victory_in_Go">852 - Deciding victory in Go</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Flood fill (detect 
+                    area with same kind of border)<br>
+                    empty spaces and keep track border pieces encountered. If all the border pieces 
+                    are of the same color (either all black or all white), then flood fill that 
+                    empty spaces to that color. Add the number of pieces on the board to get the 
+                    final score.<br>
+                    <br>
+                </span><a name="853_-_DVD_Subtitles">853 - DVD Subtitles</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Read each line of 
+                    input and extract words (continuous strings of alphabets or hyphen) with 
+                    length&gt;3. Add words from 2 languages to 2 different vectors. For each word, 
+                    store its string representation and an occurence array indicating the lines in 
+                    which this word appeared. Remove words which only occured in 1 line. Sort the 
+                    array of words for language 1 in ascending order. For each word w1, find words 
+                    w2 in the same langauge with the same occurence. Push w1 and w2 into an empty 
+                    list. Then with w1, find words w3 in the other language with the same 
+                    occurrence. Push w3 into another empty list, and sort the list after that. Print 
+                    these 2 lists.<br>
+                    <br>
+                </span><a name="854_-_Worse_Code">854 - Worse Code</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Huffman Encoding<br>
+                    Take care to handle tricky input, such as sentences with only 1 kind of symbol, 
+                    and sentences without any valid symbols.<br>
+                    1. Parse input<br>
+                    2. Build huffman tree<br>
+                    3. Calculate cost (number of bits) needed for each character used (A-Z and 
+                    Space)<br>
+                    4. Sum the total cost (frequency * number of bits)<br>
+                    5. Handle special cases (only 1 kind of character used, or empty sentence)<br>
+                    <br>
+                </span><a name="855_-_Lunch_in_Grid_City">855 - Lunch in Grid City</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Median (found by 
+                    using sort).
+                    Sort both lists of streets and avenues independently and print the median value 
+                    of both. Choose the smaller of 2 median values.<br>
+                    <br>
+                </span><a name="856_-_The_Vigenere_Cipher">856 - The Vigenere Cipher</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Ad-hoc (generate 
+                    3-digit numbers written as text and calculate the vigenere cipher keyword given 
+                    the plaintext and ciphertext)<br>
+                    To calculate (character-wise) the keyword from the plaintext and ciphertext, 
+                    shift the cipher alphabet backwards by an amount specified by the plaintext. eg.<br>
+                    plaintext - p (16)<br>
+                    encoded - C (3)<br>
+                    keyword - M (13, as given by 16-3)<br>
+                    To decode the message, generate every number written as text (plaintext) from 
+                    999 down to 000. If length of plaintext = length of input string, calculate the 
+                    keyword using the above method and print. <br>
+                    <br>
+                </span><a name="857_-_Quantiser">857 - Quantiser</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Ad Hoc (round off to 
+                    nearest interval).
+                    Round off t to nearest intervals of 60 (480/8), filter zero length results and 
+                    output. Round off formula is ((x+30)/60)*60. If t overflows (=480), cascade to b 
+                    and m. n^2 search to find zero length results.<br>
+                    <br>
+                </span><a name="858_-_Berry_Picking">858 - Berry Picking</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">Computation 
+                    Geometry (calculate length of polygon-line intersection).
+                    Store all the polygon edges in an array. For each edge, check if it intersects 
+                    the scanline (x1 &lt; scanx &lt; x2, where x1 and x2 are x coord of the edge such that 
+                    x1 &lt; x2). Add each intersecting edge to a list. Store the y coord of each 
+                    intersection point into a list. Sort the list, and sum the difference between 
+                    each pair of y coord (ie. (y1-y0) + (y3-y2) + (y5-y4) + ...). This sum gives the 
+                    length that is cut by the scanline. Check if sum &gt; required threshold.<br>
+                    <br>
+                </span><a name="859_-_Chinese_Checkers">859 - Chinese Checkers</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span style="font-weight: 400">BFS.
+                    Perform a breadth first search from the piece interested to all reachable 
+                    locations. Also include the special case of single moves. Sort the results by 
+                    decreasing row then increasing column then output.<br>
+                    <br>
+                </span><a name="860_-_Entropy_Text_Analyzer">860 - Entropy Text Analyzer</a></font></h1>
+            <h1 style="margin-left: 10; margin-right: 10" align="left">
+                <span style="font-weight: 400"><font face="Verdana" size="2">Ad-hoc<br>
+                    Tokenize the text with given seperating characters. Count the number of token 
+                    (that is, "words") and keep track of its frequency using a c++ map.<br>
+                    lambda = number of tokens<br>
+                    n = size of frequency map<br>
+                    p_i = frequency of word i<br>
+                    Use the given formula to calculate E_T, E_max AND E_rel. Note the limiting cases 
+                    for lambda = 0 and E_max = 0, where the result values may be undefined 
+                    (substitute with zero in that case).</font></span></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><a name="861_-_Little_Bishops"><font face="Verdana" size="2">861 - Little 
+                        Bishops</font></a></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana"><font size="2">Brute force/backtracking + Precalculate. 
+                Solve for white and black squares independently. For each position, place a 
+                bishop and increment the number of ways that i-th bishops can be placed. For 
+                this bishop, loop thru all valid positions "after" it and recursively try to 
+                place another bishop.<br>
+                To combine the white and black squares, note that the number of ways to place k 
+                bishops is the sum of number of ways to place i bishops on white squares and k-i 
+                bishops on black squares, where 0 &lt;= i &lt;= k.<br>
+                <br>
+                </font><b><a name="865_-_Substitution_Cypher"><font size="2">865 - Substitution 
+                        Cypher</font></a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Ad-hoc (substitution encryption)</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><a name="868_-_Numerical_Maze"><font face="Verdana" size="2">868 - Numerical 
+                        Maze</font></a></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana"><font size="2">DFS. For each cell (left to right) on the 
+                first row, perform DFS from that cell. At each level, the current number and 
+                current subsequence (given by the largest number until which we reset to 1 
+                again) is stored. Neighboring cells are reachable only if its value equals the 
+                next number in the sequence. Traverse the entire search tree and if multiple 
+                exits (cells on the last row) are found, save only the left-most one. If at 
+                least 1 path is found from this cell on the first row, no need to continue DFS 
+                on the other cells on the first row.<br>
+                <br>
+                </font><b><a name="869_-_Airline_Comparison"><font size="2">869 - Airline 
+                        Comparison</font></a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana"><font size="2">Disjoint Set. Build a disjoint-set data 
+                structure to keep track of the connectivity between cities for both airlines. 
+                For each pair of cities (i,j), check if connectivity of (i,j) in airline 1 is 
+                the same as in airline2 (n^2 comparisons). Assume that cities are represented by 
+                characters A to Z.<br>
+                <br>
+                </font><b><a name="871_-_Counting_Cells_in_a_Blob"><font size="2">871 - Counting 
+                        Cells in a Blob</font></a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                Flood fill (find largest area).</p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><a name="874_-_2D_Representations">874 - 2D 
+                        Representations</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Ad-hoc (bitmap "quadtree" decoding and run-length 
+                encoding)<br>
+                <br>
+                <b><a name="880_-_Cantor_Fractions">880 - Cantor Fractions</a></b></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Derive a closed form formula from the number of 
+                elements in a triangle y=x(x+1)/2=f(x). Consider f(x-1)+1 and find its inverse, 
+                x=[1+sqrt(1+8(y-1))]/2.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><a name="884_-_Factorial_Factors">884 - 
+                        Factorial Factors</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Ad hoc + prime generation</font></p><h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="892_-_Finding_Words">892 - Finding 
+                        Words</a> (by: Saatvik Agarwal)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">In this problem all we have to do is remove 
+                the punctuation (use ctype.h is alpha()) and take care of the hyphens by 
+                putting the hyphenated word on the next line.</font></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: Read each line and loop thru each 
+                character c (including end line), and print it if isalpha(c) or c == {' ' or 
+                '\n'}. When there is a hyphen at the end of line, mark the pointers where 
+                additional newlines should appear, and print the newlines them appropriately 
+                when the characters are printed. Use a flag to indicate a hyphen is 
+                encountered.</font></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <b>
+                    <font face="Verdana" size="2"><a name="895_-_Word_Problem">895 - Word 
+                        Problem</a></font></b></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">For each word in dictionary, count the 
+                frequency of each character ['a'..'z']. Then, for each query, also count the 
+                frequency of each character. Set total word = 0, then scan through the 
+                dictionary one by one, whenever the number of frequency of that particular 
+                word in dictionary can be formed using the given query, increase total word 
+                by one. This approach is much faster than enumerating 
+                all possible permutation of the query and then check it whether it is inside 
+                the dictionary.</font></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: For each word in dictionary, 
+                compute and store letter frequency table. For each query word, compute its 
+                letter frequency and compare that with each word in dictionary. If every 
+                letter in a dictionary word has a frequency lesser than or equal to the 
+                frequency of the same letter in the query word, this word can be formed.</font></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <b><font face="Verdana" size="2"><a name="897_-_Anagrammatic_Primes">897 - 
+                        Anagrammatic Primes</a></font></b></p><p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Ad hoc + prime number pre-generation.[an error occurred while processing this directive]</font>
+
+            </p>
+
+
+
+        </div>
+    </div>
+</div>
