@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <script type="text/javascript" src="cordova.js"></script>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
         <meta name="mobile-web-app-capable" content="yes">
@@ -14,6 +17,7 @@
         <link rel="stylesheet" href="css/kitchen-sink.css">
         <link rel="stylesheet" href="css/my-app.css">
         <link rel="icon" href="img/icon.png">
+
     </head>
     <body class="theme-teal">
         <div class="statusbar-overlay"></div>
@@ -24,293 +28,104 @@
                     <div data-page="panel-left" class="page">
                         <div class="navbar">
                             <div class="navbar-inner">
-                                <div class="center">Volume Menu</div>
+                                <div class="center">Menu</div>
                             </div>
                         </div>
                         <div class="page-content">
                             <div class="list-block">
                                 <ul>
                                     <li>
-                                        <a href="100.html" class="item-link close-panel"> 
+                                        <a href="index.html" class="item-link close-panel"> 
                                             <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-media"><i class="fa fa-home fa-fw" style="color: #009688;"></i></div>
                                                 <div class="item-inner"> 
-                                                    <div class="item-title">Volume 1 (100-199)</div>
+                                                    <div class="item-title">Home</div>
                                                 </div>
                                             </div>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="200.html" class="item-link close-panel"> 
+                                        <a href="uva_hints.html" class="item-link close-panel"> 
+                                            <div class="item-content">
+                                                <div class="item-media"><i class="fa fa-pencil fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-inner"> 
+                                                    <div class="item-title">UVA Hints</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#" class="item-link close-panel"> 
+                                            <div class="item-content">
+                                                <div class="item-media"><i class="fa fa-code-fork fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-inner"> 
+                                                    <div class="item-title">Algorithms</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    -->
+
+                                    <li>
+                                        <a href="code.html" class="item-link close-panel"> 
                                             <div class="item-content">
                                                 <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
                                                 <div class="item-inner"> 
-                                                    <div class="item-title">Volume 2 (200-299)</div>
+                                                    <div class="item-title">Code Example</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <!--
+                                    <li>
+                                        <a href="#" class="item-link close-panel"> 
+                                            <div class="item-content">
+                                                <div class="item-media"><i class="fa fa-users fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-inner"> 
+                                                    <div class="item-title">Contributors</div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    -->
+
+                                    <li>
+                                        <a href="#" class="item-link close-panel contribute_modal"> 
+                                            <div class="item-content">
+                                                <div class="item-media"><i class="fa fa-envelope fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-inner"> 
+                                                    <div class="item-title">How to Contribute</div>
                                                 </div>
                                             </div>
                                         </a>
                                     </li>
 
                                     <li>
-                                        <a href="300.html" class="item-link close-panel"> 
+                                        <a href="about_us.html" class="item-link close-panel"> 
                                             <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-media"><i class="fa fa-user fa-fw" style="color: #009688;"></i></div>
                                                 <div class="item-inner"> 
-                                                    <div class="item-title">Volume 3 (300-399)</div>
+                                                    <div class="item-title">About Us</div>
                                                 </div>
                                             </div>
                                         </a>
                                     </li>
-
+                                    <!--
                                     <li>
-                                        <a href="400.html" class="item-link close-panel"> 
+                                        <a href="#" class="item-link close-panel open-login-screen"> 
                                             <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
+                                                <div class="item-media"><i class="fa fa-eye fa-fw" style="color: #009688;"></i></div>
                                                 <div class="item-inner"> 
-                                                    <div class="item-title">Volume 4 (400-499)</div>
+                                                    <div class="item-title">Whats New</div>
                                                 </div>
                                             </div>
                                         </a>
                                     </li>
-
-                                    <li>
-                                        <a href="500.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 5 (500-599)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="600.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 6 (600-699)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="700.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 7 (700-799)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="800.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 8 (800-899)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="900.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 9 (900-999)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c0.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 100 (10000-10099)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c1.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 101 (10100-10199)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c2.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 102 (10200-10299)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c3.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 103 (10300-10399)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c4.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 104 (10400-10499)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c5.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 105 (10500-10599)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c6.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 106 (10600-10699)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c7.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 107 (10700-10799)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c8.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 108 (10800-10899)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c9.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 109 (10900-10999)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c10.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 110 (11000-11099)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c11.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 111 (11100-11199)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c12.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 112 (11200-11299)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c13.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 113 (11300-11399)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c14.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 114 (11400-11499)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="c15.html" class="item-link close-panel"> 
-                                            <div class="item-content">
-                                                <div class="item-media"><i class="fa fa-code fa-fw" style="color: #009688;"></i></div>
-                                                <div class="item-inner"> 
-                                                    <div class="item-title">Volume 115 (11500-11599)</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
+                                    -->
 
                                 </ul>
-                            </div>
-                            <div class="content-block">
-                                <p class="buttons-row">
-                                    <a href="#" class="button button-fill button-raised color-red close-panel">Close Menu</a>
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -325,12 +140,14 @@
                             <div class="navbar-inner">
                                 <div class="left"><a href="#" class="open-panel link icon-only"><i class="fa fa-bars fa-fw"></i></a></div>
                                 <div class="center">UVA Methods to Solve</div>
-                                <div class="right"><a href="#" class="open-popover link" data-popover=".popover-menu"><i class="fa fa-ellipsis-v fa-fw"></i></a></div>
+                                <div class="right">
+                                    <a href="#" class="open-popover link" data-popover=".popover-links"><i class="fa fa-share-alt-square fa-fw"></i></a>
+                                </div>
                             </div>
                         </div>
                         <div class="page-content">
                             <div class="content-block">Welcome to UVA Methods to Solve application. You can get more than 1000 hints of UVA problem set.</div>
-                            
+
                             <div class="content-block-title">Master Contributor</div>
 
                             <div class="card facebook-card">
@@ -338,7 +155,7 @@
                                     <div class="facebook-name">Steven Halim</div>
                                 </div>
                                 <div class="card-content">
-                                    <img src="img/halim.jpg" width="100%">
+                                    <img src="img/halim.jpg" style="width: 100%;">
                                     <div class="card-content-inner">
                                         <p style="text-align: justify;">
                                             Lecturer, School of Computing (SoC)<br/>
@@ -354,21 +171,61 @@
             </div>
         </div>
 
-        <div class="popover popover-menu">
+        <div class="popover popover-links">
             <div class="popover-angle"></div>
             <div class="popover-inner">
                 <div class="list-block">
                     <ul>
-                        <li><a href="#" class="list-button item-link close-popover contribute_modal">Contribute</a></li>
-                        <li><a href="#" class="list-button item-link close-popover about_modal">About</a></li>
+                        <li><a href="javascript:void(0);" class="list-button item-link" onclick="facebook_share();"><i class="fa fa-facebook-official fa-fw" style="color: #3A5795;"></i>&nbsp;Facebook</a></li>
+                        <li><a href="javascript:void(0);" class="list-button item-link" onclick="twitter_share();"><i class="fa fa-twitter fa-fw" style="color: #55ACEE;"></i>&nbsp;Twitter</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
+        <div class="login-screen">
+            <div class="page-content login-screen-content">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="content-block" style="height: 100%;padding: 0px">
+                                <h2 style="color: white; text-align: center; position: fixed; bottom: 50%;">Welcome to UVA Methods to Solve App</h2>
+                            </div>
+                            <div class="content-block" style="bottom: 20px;position: fixed;width: 100%;">
+                                <p class="buttons-row">
+                                    <a href="#" class="button color-red close-login-screen">Skip</a>
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="content-block" style="height: 100%;padding: 0px">
+                                <h2 style="color: white; text-align: center; position: fixed; bottom: 50%;width: 100%;">Join our team for more contribution for this app. You can contribute remotely.</h2>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2 style="color: white;text-align: center;">Lead Contributor</h2>
+
+                            <h1 style="color: white;text-align: center;">Steven Halim</h1>
+
+                            <img src="img/halim.jpg" style="width: 100%;">
+
+                            <h3 style="color: white;text-align: center;">
+                                Lecturer, School of Computing (SoC)<br/>
+                                National University of Singapore (NUS)
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>  
+
         <script type="text/javascript" src="js/jquery-1.11.2.js"></script>
         <script type="text/javascript" src="js/framework7.js"></script>
-        <script type="text/javascript" src="js/kitchen-sink.js"></script>
-        <script type="text/javascript" src="js/my-app.js"></script>
+        <!--        <script type="text/javascript" src="js/kitchen-sink.js"></script>-->
+        <script type="text/javascript" src="js/config.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

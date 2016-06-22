@@ -1,0 +1,46 @@
+<div data-page="03" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Fast integer input</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content-block">
+            <pre>
+/**********************
+ * Fast integer input *
+ **********************
+ * Reads an integer from standard input.
+ * Almost equivalent to scanf( "%d", n ) (must be terminated
+ * by a space or a '\n').
+ * WARNING:
+ * Valladolid now forbids unlocked IO. Remove the "_unlocked"
+ * to get a version that is 1.5 - 2 times slower.
+ *
+ * #include <stdio.h>
+ * USED BY: lis
+ **/
+void readn( register int *n )
+{
+    int sign = 1;
+    register char c;
+    *n = 0;
+    while( ( c = getc_unlocked( stdin ) ) != '\n' )
+    {
+        switch( c )
+        {
+            case '-' : sign = -1;
+            case ' ': goto hell;
+            case '\n': goto hell;
+            default: (*n) *= 10; (*n) += ( c - '0' ); break;
+        }
+    }
+hell:
+    (*n)*=sign;
+}
+            </pre>
+        </div>
+    </div>
+</div>

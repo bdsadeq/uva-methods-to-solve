@@ -1,0 +1,54 @@
+<div data-page="04" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Longest Increasing Subsequence</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content-block">
+            <pre>
+/**********************************
+ * Longest Increasing Subsequence *
+ **********************************
+ * Computes the longest increasing subsequence for a number
+ * of problem instances, each given as a sequence of non-negative
+ * integers, terminated by a -1. The whole input is terminated
+ * by a -1.
+ *
+ * readn( int *n ) reads the next integer in the sequence.
+ *
+ * #include <vector>
+ * #include <algorithm>
+ * REQUIRES: readn (suggested)
+ * COMPLEXITY: O(nlogn)
+ **/
+int lis()
+{
+    int n, prob = 0;
+    vector< int > table;
+    while( true )
+    {
+        table.clear();
+        while( true )
+        {
+            readn( &n );        // "cin >> n;" might be too slow
+            if( n < 0 ) break;
+            vector< int >::iterator i =
+                upper_bound( table.begin(), table.end(), n );
+            if( i == table.end() )
+                table.push_back( n );
+            else
+                *i = n;
+        }
+        if( table.empty() ) break;
+        printf( "Test #%d:\n  maximum possible interceptions: %d\n\n",
+            ++prob, table.size() );
+    }
+    return 0;
+}
+            </pre>
+        </div>
+    </div>
+</div>

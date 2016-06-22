@@ -1,0 +1,389 @@
+<div data-page="700" class="page">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+            <div class="center">Volume 7 (700-799)</div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="content-block">
+
+
+
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="700 - Date Bugs">700 - Date Bugs</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem is 'similar' to 105-The Skyline 
+                Problem and 467-Synching Signals. You can use an array of 10000 Boolean 
+                flags to mark the years. Try it</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2">
+                    <a name="703 - Triple Ties: The Organizers Nightmare">703 - Triple Ties: The 
+                        Organizer's Nightmare</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Similar spirit to problem 626, with additional 
+                constraint. Just create three nested loops i,j,k from 1 to N. Check for 
+                condition:</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">1. (i&lt;j&lt;k or i&gt;j&gt;k) and (win[i][j] &amp;&amp; win[j][k] 
+                &amp;&amp; win[k][i])<br>
+                2. (i&lt;j&lt;k) and (!win[i][j] &amp;&amp; !win[j][i] &amp;&amp; !win[i][k] &amp;&amp; !win[k][i] &amp;&amp; !win[j][k] 
+                &amp;&amp; !win[k][j])</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">But since this problem requires you to output 
+                the total triples first, you need to do this loop twice. First, to count the 
+                total, print it, and then do this O(n^3) loop again to actually print the 
+                triples.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Or you can do one loop only, insert all 
+                feasible triplets into array, then directly print this array later 
+                (faster... but sacrifice more memory storage).</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="706 - LC-Display">706 - LC-Display</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span lang="en-gb">This is </span>a pure output-related problem. Just do 
+                what they want, precisely. There are various tricks to solve this problem 
+                and it is up to your imagination :)</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">I can say that solving this 
+                    problem need patience since you must be very precise...</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="713 - Adding Reversed Numbers">7<span lang="en-gb">13</span> - 
+                        <span lang="en-gb">Adding Reversed Numbers</span></a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">This problem is easy. Just 
+                    ignore all 'reverse' stuffs... this problem can be solved without reversing 
+                    anything...</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Read in the input as 
+                    string!!!, no default data type can store up to 200 digits...</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Then do basic carry 
+                    addition to the right (the normal addition is to align two numbers rightmost 
+                    and then shift the carry to the left).</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">Example:</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Courier New" size="2">&nbsp;4- 3- 5- 8<br>
+                    &nbsp;7- 5- 4-<br>
+                    -----------+<br>
+                    11- 8- 9- 8<br>
+                    shift carry to the right<br>
+                    &nbsp;1- 9- 9- 8</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Courier New" size="2">&nbsp;3- 0- 5-<br>
+                    &nbsp;7- 9- 4-<br>
+                    -----------+<br>
+                    10- 9- 9-<br>
+                    shift carry to the right<br>
+                    &nbsp;0- 0- 0- 1<br>
+                    here... ignore leading zeroes</font></span></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Courier New" size="2"><span lang="en-gb">&nbsp;4- 5-<br>
+                    &nbsp;5- 5-<br>
+                    -----------+<br>
+                    &nbsp;9-10-<br>
+                    shift carry to the right<br>
+                    &nbsp;9- 0- 1<br>
+                    here... don't print </span>"9" only (terminate because there is '0' in the 
+                middle<br>
+                but you should print "901"</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="714 - Copying Books">7<span lang="en-gb">1</span>4 - 
+                        Copying Books</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">
+                <span lang="en-gb">This  </span>is a classic partitioning problem. You can 
+                either use DP to solve this, or use Divide &amp; Conquer method. More details 
+                will be placed here later...</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="725 - Division">725 - Division</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Just systematically enumerate all 
+                possibilities... Clever brute force approach will be able to pass the time 
+                limit.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <a name="727 - Equation"><font face="Verdana" size="2">727 - 
+                        Equation</font></a></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Given an infix expression, convert 
+                it to postfix.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">There are a lot of Infix to Postfix 
+                conversion algorithm available in the web. Go and learn the 
+                algorithm to solve this problem. You only need one stack to do 
+                this conversion.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="729 - The Hamming Distance Problem">729 
+                        - The Hamming Distance Problem</a> (by: Wei Tu)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">You know the length and how many 1's should be 
+                in the bit string. Therefore, you can solve the problem by dual recursion 
+                first bit is a 0 or 1, with an extra argument of all the preceding bits.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <a name="732 - Anagram by Stack"><font face="Verdana" size="2">732 
+                        - Anagram by Stack</font></a></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Permute ii..iioo..oo (total 'i'=total 
+                'o'=length of the original word), and then try simulating this 
+                ii..iioo..oo using a stack. If our simulation yields the desired 
+                output, then print this permutation.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="737 - Gleaming the Cubes">737 - 
+                        Gleaming the Cubes</a> (by: Wei Tu)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left"><font face="Verdana" size="2">
+                If there is only one cube, then the total volume is the cube.&nbsp;If there's 
+                two, it is the intersection of the two. If there's three, the answer is the 
+                intersection of the first one intersects with the third.&nbsp;By keeping the 
+                vertices of current intersection cube, you'll be able to solve the problem.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="739 - Soundex Indexing">739 - Soundex 
+                        Indexing</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Straightforward conversion will do. Just 
+                follow their rules :)</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <a name="740 - Baudot Data Communication Code">
+                        <font face="Verdana" size="2">740 - Baudot Data Communication Code</font></a></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">What you have to do is simple, 
+                decrypt the input using the given table.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Store the decryption table into an 2 
+                array with size 32. One for Up-Shift table, the other for 
+                Down-Shift table. These information are given in the first 2 lines 
+                of the input.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Read input per 5-characters, then 
+                use your binary-&gt;decimal technique to convert them to binary. This 
+                is the index for your decryption table.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">After that just print out the 
+                contents of your array with that index. Print Up-Shift characters 
+                if you are in Up-Shift mode, or Down-Shift characters if you are 
+                in Down-Shift mode. Use Flag to distinguish these 2 state. Remember: The 
+                initial state of each message should be assumed to be in the down-shift 
+                state.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="741 - Burrows Wheeler Decoder">741 - 
+                        Burrows Wheeler Decoder</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Solving this problem will be much easier if 
+                you understand how Burrows Wheeler compression algorithm works. I suggest 
+                that you do Google search on the term: 'Burrows Wheeler'. You'll find the 
+                decompression algorithm there. The algorithm is in linear time.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="743 - The MTM Machine">743 - The MTM 
+                        Machine</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">You need a recursive checker. Formulate your 
+                recursive checker based on the rule given. Once it violates the rule, output 
+                "NOT ACCEPTABLE", otherwise, output the new number produced by this MTM 
+                machine. </font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="748 - Exponentiation">748 - 
+                        Exponentiation</a> (By: Darkman)</font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">First, found out where the decimal point is. 
+                If after the decimal point there are x digits and the power is n, then 
+                the final result will have n*x digits after the decimal point (Of course 
+                you have to eliminate the trailing zeros explicitly). Then convert the 
+                original number into an integer by withdrawing the '.' , example, if it 98.876 then the integer 
+                is 98876, then use your BigNumber exponentiation. The remaining part is all 
+                about printing the output in the right format, which is replacing the 
+                '.' back.</font></p><h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <a name="750 - 8 Queens Chess Problem">
+                        <font face="Verdana" size="2">750 - 8 Queens Chess Problem</font></a></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">This problem is quite popular, refer 
+                to your algorithm books regarding 'backtracking', they usually use 
+                8 Queens problem as a sample.<br>
+                Alternative: Brute Force. Use 1D array (only one queen per column) to find 
+                combinations. Finally, check if diagonals violate rule.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="753 - A Plug for UNIX">753 - A Plug 
+                        for UNIX</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">A maximum bipartite matching problem. 
+                Formulated this problem as a graph and then pass it to a specialized maximum 
+                bipartite matching algorithm or a network flow algorithm.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Alternative: Bipartite Matching. Create a 
+                graph that has a source node connected to all plugs with each capacity 1, 
+                all devices connects to plugs with capacity 1, all adapters connect from 
+                plug A to plug B with infinite capacity, and all devices connects the sink 
+                with capacity 1. After that, use a maxflow algorithm to determine that 
+                maximum number of connected devices. The answer will then be total-connected 
+                devices. Note that adapters should only connect one way. A to B does not 
+                mean B to A.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="755 - 487-3279">755 - 487-3279</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Ad hoc, simulation. Convert all to numbers. 
+                Use STL map for 'hashing'. All telephone numbers are 7-digits, with '-' 
+                between 3rd and 4th number. Trailing zeroes (if int is used) should be added 
+                when necessary.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="756 - Biorhythms">756 - Biorhythms</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Similar to problem 105, 467, and 700... use an 
+                array to flags these days... Please browse the internet to find out more 
+                about biorhythms.<br>
+                Complete search, ad-hoc. If they are already in the triple peak, calculate 
+                the next one.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b><a name="758_-_The_Same_Game">758 - The 
+                        Same Game</a></b><br>
+                <br>
+                Ad-hoc. Fun! Takes time to code, but just follow instructions.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b>
+                    <a name="759_-_The_Return_of_the_Roman_Empire">759 - The Return of the Roman 
+                        Empire</a></b><br>
+                <br>
+                Backtracking / Coin change. Notice that valid numeric sequences are just 
+                these rules:<br>
+                <br>
+                1. Pick 0 or 1 from each row. Top to bottom only.<br>
+                M MM MMM<br>
+                C CC CCC CD D DC DCC DCCC CM<br>
+                X XX XXX XL L LX LXX LXXX XC<br>
+                I II III IV V VI VII VIII IX<br>
+                <br>
+                2. The string should terminate, i.e. no trailing characters.<br>
+                <br>
+                Store the sequence used to get the converted number.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b><a name="760_-_DNA_Sequencing">760 - DNA 
+                        Sequencing</a></b><br>
+                <br>
+                Complete search. Use strncmp for each and every possible combination. Note 
+                that null zero should not be checked (do not go out of bounds!).</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <b>
+                    <font face="Verdana" size="2"><a name="762 - We Ship Cheap">762 - 
+                        We Ship Cheap</a></font></b></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Solve this problem using Breath-First Search. 
+                Formulate the input as a graph, then since the edge weight is uniform, the 
+                shortest one found by BFS will be the minimal route. Simply start traversing 
+                from starting city to destination city. Note that input is quite large.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b><a name="775_-_Hamiltonian_Cycle">775 - 
+                        Hamiltonian Cycle</a></b><br>
+                <br>
+                Backtracking / complete search. Note that all nodes can only be traversed 
+                once except the first node. Possible not to mark the first node when it 
+                first start. Order does not seem to be important.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="776 - Monkeys in a Regular Forest">776 - 
+                        Monkeys in a Regular Forest</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">To solve this problem (+ problem 784 and 785), 
+                you need a recursive flood-fill algorithm, which I believe should be a 
+                standard algorithm taught in algorithm class. Flood-fill the area which have the same monkey 
+                ID (represent the same family), starting with number 1 from top-left to 
+                bottom-right. The output must be formatted as requested, otherwise you'll 
+                get Presentation Error. </font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b><a name="778_-_Recording_a_tape">778 - 
+                        Recording a tape</a></b><br>
+                <br>
+                Ad-hoc, complete search. Surprising that so few attempted the question. 
+                Perhaps it's because there is no limits set. So here it is: Max number of 
+                songs = 32. Try to place all the songs into Side A, then place the songs 
+                starting at the back into side B(in a binary way).</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="782 - Contour Painting">78<span lang="en-gb">2</span> - 
+                        <span lang="en-gb">Contour Painting</span></a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Similar as problem 776, we use flood-fill 
+                algorithm to paint the maze.<span lang="en-gb"> But this time we only paint 
+                    if and only if it is near the border. (the initial '*' can be inside or 
+                    outside the border, treat them appropriately).</span></font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <span lang="en-gb"><font face="Verdana" size="2">I think this problem is the 
+                    hardest among 776-782-784-785 flood fill problems...</font></span></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="784 - Maze Exploration">784 - 
+                        Maze Exploration</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Similar as problem 776<span lang="en-gb"> and 
+                    782</span>, we use flood-fill 
+                algorithm to paint the maze.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="785 - Grid Coloring">785 - 
+                        Grid Coloring</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">Similar as 784, just use flood-fill algorithm 
+                appropriately. The difference between 784 and 785 is very minimal. You can 
+                solve two problems using roughly similar source code.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b>
+                    <a name="787_-_Maximum_Sub-sequence_Product">787 - Maximum Sub-sequence 
+                        Product</a></b><br>
+                <br>
+                Big Int. Use java (or write your own) BigInt class. Credits to chrismoh in 
+                UVA forum for the algorithm. Starting from the first element, update the 
+                largest positive and negative product. Upon reading 0 or end, reset the 
+                values. Print the highest number calculated. Note that the result may be 
+                negative or zero.</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2"><b><a name="789_-_Indexing">789 - Indexing</a></b><br>
+                <br>
+                Ad-hoc. Use STL map for storing the words that needed to be indexed. 
+                Unfortunately, it does not have a test case yet. Any blank answer will do 
+                for now (hint hint).<br>
+                <br>
+                <b><a name="790_-_Head_Judge_Headache">790 - Head Judge Headache</a><br>
+                </b><br>
+                Ad-hoc. Use STL sort and comparator for easier coding. The setter did not 
+                specify the requirements well, which is well discussed in the UVA forums. 
+                When events occur at the same time, all rejected answers, ie. "N", are 
+                considered first before the accepted "Y". Also, show all the teams up to the 
+                highest number that have submitted something, ie if 1,2,4 submitted 
+                something, show 1,2,3,4. Finally, do not print trailing spaces, and keep the 
+                numbers aligned to the right.</font></p>
+            <h1 style="margin-left: 10; margin-right: 10" align="left"><b>
+                    <font face="Verdana" size="2"><a name="793 - Network Connections">793 - 
+                        Network Connections</a></font></b></h1>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">The best way to solve this problem is using 
+                disjoint forest set data structure (implementation of Union Find data 
+                structure).</font></p>
+            <p style="margin-left: 10; margin-right: 10" align="left">
+                <font face="Verdana" size="2">When you know 2 computers are connected, union 
+                them by calling union_set(comp1,comp2), then for checking connectivity, you 
+                can just determine if find_set(comp1) == find_set(comp2). Everything will be 
+                very simple if you do this. However, don't forget if this is a multiple 
+                input problems.<br>
+                <br>
+                <b><a name="795_-_Sandorfs_Cipher">795 - Sandorf's Cipher</a></b><br>
+                <br>
+                Ad-hoc. Find out the one to one mapping between the message and the cipher. 
+                Use paper with holes (at the correct places of course). Read the question 
+                carefully - it says that the paper with holes turn, but I initially 
+                understood it as the bottom paper turns... Also note that the trailing # 
+                should be removed.<br>
+                <br>
+                <b><a name="796_-_Critical_Links">796 - Critical Links</a></b><br>
+                <br>
+                Modified DFS. This problem can be solved by modifying DFS to check for 
+                articulation points. During DFS, store dfsnum(u) the order that the element 
+                u is checked, and low(u) the lowest order number that element u can be 
+                accessed from. Whenever dfsnum(u) &lt; low(v), edge u-v is a bridge. Remember 
+                to sort the answer in ascending order.<br>
+                <br>
+                <b><a name="799_-_Safari_Holiday">799 - Safari Holiday</a></b><br>
+                <br>
+                Math. For people who read the forums (too much), the answer of this problem 
+                is posted in the forums. It deals with block designs but the implementation 
+                is just 2 mod checks.</font></p>
+
+
+
+        </div>
+    </div>
+</div>
